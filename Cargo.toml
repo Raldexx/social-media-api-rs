@@ -1,0 +1,23 @@
+[package]
+name = "social-media-api"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+
+[dependencies]
+argon2 = "0.5"
+chrono = { version = "0.4.45", features = ["serde"] }
+dotenvy = "0.15.7"
+http = "1.5.0"
+jsonwebtoken = "9"
+rustapi-openapi = "0.2.2"
+rustapi-rs = { version = "0.2.2", features = ["extras-cors"] }
+serde = { version = "1.0.229", features = ["derive"] }
+sqlx = { version = "0.8.6", default-features = false, features = ["runtime-tokio", "tls-rustls", "postgres", "chrono", "migrate", "macros"] }
+tokio = { version = "1.54.1", features = ["macros", "rt-multi-thread", "signal"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+
+# Password hashing is slow in debug builds unless optimised.
+[profile.dev.package.argon2]
+opt-level = 3
