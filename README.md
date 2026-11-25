@@ -275,5 +275,5 @@ That runs all 121 checks, including that roles really change what users can do.
 
 ## Acknowledgements
 
-- [RustAPI](https://github.com/Tuntii/RustAPI) by Tuntii
+- [RustAPI](https://github.com/Tuntii/RustAPI) by @Tuntii
 - [SQLx](https://github.com/launchbadge/sqlx), [Tokio](https://tokio.rs) and the RustCrypto [Argon2](https://github.com/RustCrypto/password-hashes) crate
